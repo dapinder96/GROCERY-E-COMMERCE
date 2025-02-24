@@ -5,6 +5,7 @@ const sequelize = require('../config/database');
 const basename = path.basename(__filename);
 const db = {};
 
+
 fs.readdirSync(__dirname)
   .filter(file => file !== basename && file.slice(-3) === '.js')
   .forEach(file => {
