@@ -18,3 +18,4 @@ module.exports = (sequelize, DataTypes) => {
 
   return Region;
 };
+
