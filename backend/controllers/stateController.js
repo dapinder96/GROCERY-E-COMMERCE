@@ -1,5 +1,7 @@
 const { State } = require("../models");
 
+
+
 // Get all states
 const getAllStates = async (req, res) => {
   try {
