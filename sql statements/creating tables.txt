@@ -1,3 +1,4 @@
+
 create database project;
 use project;
 -- MySQL Workbench Script to Create Tables
