@@ -27,3 +27,5 @@ exports.getCountries = async (req, res) => {
     res.status(500).json({ message: 'Error fetching countries', error });
   }
 };
+
+
