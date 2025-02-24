@@ -8,3 +8,4 @@ router.post('/login', userController.login);
 router.get('/all', authMiddleware, userController.getAllUsers); // Protected route
 
 module.exports = router;
+
