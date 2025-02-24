@@ -7,3 +7,4 @@ router.get('/roles', rolesController.getRoles); // Get all roles
 router.delete('/roles/:id', rolesController.deleteRole); // Delete a role by ID
 
 module.exports = router;
+
