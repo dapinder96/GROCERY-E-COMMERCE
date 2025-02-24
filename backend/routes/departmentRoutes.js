@@ -18,3 +18,4 @@ router.put("/:id", departmentController.updateDepartment);
 router.delete("/:id", departmentController.deleteDepartment);
 
 module.exports = router;
+
