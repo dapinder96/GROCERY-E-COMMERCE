@@ -6,5 +6,4 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   dialect: process.env.DB_DIALECT,
   logging: false,  // Set to true if you want to log SQL queries
 });
-
 module.exports = sequelize;
