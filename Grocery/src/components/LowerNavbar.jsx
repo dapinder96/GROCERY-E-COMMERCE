@@ -1,15 +1,14 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton } from '@headlessui/react'
-// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, Menu, MenuButton } from '@headlessui/react'
 
 const LowerNavbar = [
-  { name: 'INTERIORS', href: '#' },
-  { name: 'EXTERIORS', href: '#' },
-  { name: 'UTILITY', href: '#' },
-  { name: 'SPARE PARTS', href: '#' },
-  { name: 'SAFETY & SECURITY', href: '#' },
-  { name: 'CLEANING & CARE', href: '#' },
-  { name: 'LIGHTS & ELECTRONICS', href: '#' },
-  { name: 'TWO WHEELERS', href: '#' },
+  { name: 'FRUITS & VEGETABLES', href: '#' },
+  { name: 'DAIRY & BAKERY', href: '#' },
+  { name: 'BEVERAGES', href: '#' },
+  { name: 'SNACKS', href: '#' },
+  { name: 'SPICES & CONDIMENTS', href: '#' },
+  { name: 'HOUSEHOLD ESSENTIALS', href: '#' },
+  { name: 'PERSONAL CARE', href: '#' },
+  { name: 'GRAINS & PULSES', href: '#' },
 ]
 
 function classNames(...classes) {
@@ -29,9 +28,7 @@ export default function Example() {
                     {item.name}
                   </MenuButton>
                 </div>
-                <Menu.Items
-                  className="absolute left-0 z-10 mt-2 w-48 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
-                >
+                <Menu.Items className="absolute left-0 z-10 mt-2 w-48 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
                   <Menu.Item>
                     {({ active }) => (
                       <a
@@ -41,7 +38,7 @@ export default function Example() {
                           'block px-4 py-2 text-sm text-gray-700'
                         )}
                       >
-                        Option 1
+                        Fresh Produce
                       </a>
                     )}
                   </Menu.Item>
@@ -54,7 +51,7 @@ export default function Example() {
                           'block px-4 py-2 text-sm text-gray-700'
                         )}
                       >
-                        Option 2
+                        Organic Products
                       </a>
                     )}
                   </Menu.Item>
@@ -67,7 +64,7 @@ export default function Example() {
                           'block px-4 py-2 text-sm text-gray-700'
                         )}
                       >
-                        Option 3
+                        Weekly Deals
                       </a>
                     )}
                   </Menu.Item>
