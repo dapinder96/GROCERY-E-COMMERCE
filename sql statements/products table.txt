@@ -1,0 +1,35 @@
+CREATE TABLE Brand (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL UNIQUE,
+    description TEXT NULL
+);
+
+
+CREATE TABLE Product (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    category_id INT NOT NULL,
+    brand_id INT NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL DEFAULT 0,
+    description TEXT NULL,
+    FOREIGN KEY (category_id) REFERENCES Category(id) ON DELETE CASCADE,
+    FOREIGN KEY (brand_id) REFERENCES Brand(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE ProductVariant (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    variant_type VARCHAR(255) NOT NULL,  -- Example: Color, Size, Material
+    variant_value VARCHAR(255) NOT NULL, -- Example: Red, Large, Leather
+    FOREIGN KEY (product_id) REFERENCES Product(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE ProductImage (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    image_url VARCHAR(255) NOT NULL,
+    FOREIGN KEY (product_id) REFERENCES Product(id) ON DELETE CASCADE
+);
