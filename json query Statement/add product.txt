@@ -1,0 +1,8 @@
+{
+  "name": "Apples",
+  "category_id": 1,
+  "brand_id": 2,
+  "price": 99.99,
+  "stock": 50,
+  "description": "High-quality Apples ."
+}
