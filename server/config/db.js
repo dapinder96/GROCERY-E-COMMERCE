@@ -4,7 +4,7 @@ const client = new Client({
   host: "localhost",
   user: "postgres",
   port: 5432,
-  password: "ankur@yash@0300@YASH",
+  password: "Singh0096#",
   database: "grossstore",
 })
 
@@ -99,6 +99,19 @@ const createTables = async () => {
       )
     `)
     console.log("Order items table created or already exists")
+
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS reviews (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER REFERENCES users(id),
+        product_id INTEGER REFERENCES products(id),
+        rating INTEGER CHECK (rating >= 1 AND rating <= 5),
+        comment TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE (user_id, product_id)
+      )
+    `)
+    console.log("Reviews table created or already exists")
   } catch (error) {
     console.error("Error creating tables:", error)
     throw error

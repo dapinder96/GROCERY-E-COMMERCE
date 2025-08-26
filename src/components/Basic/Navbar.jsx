@@ -45,7 +45,7 @@ function Navbar() {
               <div className="hidden md:flex space-x-6">
                 <Link to="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link>
                 <Link to="/products" className="text-gray-700 hover:text-green-600 transition-colors">Shop</Link>
-                <a href="#" className="text-gray-700 hover:text-green-600 transition-colors">About</a>
+                <Link to="/about" className="text-gray-700 hover:text-green-600 transition-colors">About</Link>
                 <Link to="/orders" className="text-gray-700 hover:text-green-600 transition-colors">Orders</Link>
                 <Link to="/customer" className="text-gray-700 hover:text-green-600 transition-colors">Customer Care</Link>
               </div>
@@ -112,7 +112,7 @@ function Navbar() {
                 <div className="flex flex-col space-y-3 px-4 py-4">
                   <Link to="/" className="text-gray-700 hover:text-green-600 transition-colors py-2 border-b border-gray-100">Home</Link>
                   <Link to="/products" className="text-gray-700 hover:text-green-600 transition-colors py-2 border-b border-gray-100">Shop</Link>
-                  <a href="#" className="text-gray-700 hover:text-green-600 transition-colors py-2 border-b border-gray-100">About</a>
+                  <Link to="/about" className="text-gray-700 hover:text-green-600 transition-colors py-2 border-b border-gray-100">About</Link>
                   <Link to="/orders" className="text-gray-700 hover:text-green-600 transition-colors py-2 border-b border-gray-100">Orders</Link>
                   <Link to="/customer" className="text-gray-700 hover:text-green-600 transition-colors py-2 border-b border-gray-100">Customer</Link>
                   <div className="flex space-x-2 pt-2">

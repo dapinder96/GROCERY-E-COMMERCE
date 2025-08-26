@@ -7,6 +7,10 @@ const productRoutes = require("./routes/productRoutes")
 const cartRoutes = require("./routes/cartRoutes")
 const orderRoutes = require("./routes/orderRoutes")
 const testimonialRoutes = require("./routes/testimonialRoutes")
+const reviewRoutes = require('./routes/reviewRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
+
+
 const multer = require("multer")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
@@ -35,8 +39,11 @@ app.use("/api", userRoutes)
 app.use("/api", productRoutes)
 app.use("/api", cartRoutes)
 app.use("/api", orderRoutes)
+app.use('/api/reviews', reviewRoutes);
+app.use('/api/payments', paymentRoutes);
+
 app.use("/api/testimonials", testimonialRoutes)
-const SECRET_KEY = "your_secret_key_here" // Replace with a secure secret key
+const SECRET_KEY = "your_secret_key_here" 
 
 //Signup and Login routes are moved to userRoutes.js
 

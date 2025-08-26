@@ -12,6 +12,7 @@ import Signup from './components/Auth/Signup';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import AdminMain from './components/Admin/AdminMain';
+import About from './components/About/About'
 
 // New Components
 import AllProducts from './components/Products/AllProucts';
@@ -22,6 +23,8 @@ import Customer from './components/customer/Customer'
 import PrivateRoute from './Protected_routes/PrivateRoute';
 import UserHistory from './components/UserHistory/UserHistory';
 import Orders from './components/Products/Orders';
+import ProductReviews from './components/Products/ProductReviews';
+
 
 function App() {
   return (
@@ -36,6 +39,10 @@ function App() {
               <Route path="products" element={<AllProducts />} />
               <Route path="userhistory" element={<UserHistory />} />
               <Route path="customer" element={<Customer />} />
+              <Route path="about" element={<About />} />
+
+              <Route path="products/:productId/reviews" element={<ProductReviews />} />
+
               
               {/* Protected Routes */}
               <Route element={<PrivateRoute />}>
